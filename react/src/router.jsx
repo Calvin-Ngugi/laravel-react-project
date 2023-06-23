@@ -3,8 +3,8 @@ import Login from "./views/Login";
 import Signup from "./views/Signup";
 import Users from "./views/Users";
 import NotFound from "./views/NotFound";
-import DefaultLayout from "./assets/components/DefaultLayout";
-import Guestlayout from "./assets/components/Guestlayout";
+import DefaultLayout from "./components/DefaultLayout";
+import Guestlayout from "./components/Guestlayout";
 import Dashboard from "./views/Dashboard";
 
 const router = createBrowserRouter([
