@@ -10,14 +10,14 @@ const StateContext = createContext({
 // eslint-disable-next-line react/prop-types
 export const ContextProvider = ({ children }) => {
     const [user, setUser] = useState({});
-    const [token, _setToken] = useState(localStorage.getItem("ACCESS_TOKEN"));
+    const [token, _setToken] = useState(localStorage.getItem('ACCESS_TOKEN'));
 
     const setToken = (token) => {
         _setToken(token);
         if (token) {
-            localStorage.setItem("ACCESS_TOKEN", token);
+            localStorage.setItem('ACCESS_TOKEN', token);
         } else {
-            localStorage.removeItem("ACCESS_TOKEN");
+            localStorage.removeItem('ACCESS_TOKEN');
         }
     };
 
@@ -35,4 +35,5 @@ export const ContextProvider = ({ children }) => {
     );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useStateContext = () => useContext(StateContext);
